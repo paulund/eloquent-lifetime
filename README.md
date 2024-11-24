@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/paulund/eloquent-lifetime.svg?style=flat-square)](https://packagist.org/packages/paulund/eloquent-lifetime)
 
 ---
-![Eloquent Lifetime](https://paulund.co.uk/images/eloquent-lifetime/eloquent-lifetime.webp)
+![Eloquent Lifetime](https://raw.githubusercontent.com/paulund/eloquent-lifetime/refs/heads/main/assets/images/eloquent-lifetime.webp)
 
 This is a Laravel package that allows you to set a lifetime on an Eloquent model. 
 
