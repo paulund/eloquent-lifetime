@@ -1,17 +1,18 @@
 {
-    "name": "vendor/package-name",
-    "description": "Package description",
+    "name": "paulund/eloquent-lifetime",
+    "description": "Laravel package to delete records after a certain amount of time",
     "keywords": [],
     "authors": [
         {
-            "name": "Author name",
-            "email": "author@domain.com",
+            "name": "Paulund",
+            "email": "paul@paulund.co.uk",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.3",
-        "illuminate/contracts": "^10.0||^11.0"
+        "illuminate/contracts": "^11.0",
+        "illuminate/support": "^11.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -23,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\PackageName\\PackageNameServiceProvider"
+                "Paulund\\EloquentLifetime\\EloquentLifetimeServiceProvider"
             ]
         }
     },
@@ -64,9 +65,9 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "VendorName\\PackageName\\": "src/",
-            "VendorName\\PackageName\\Tests\\": "tests/",
-            "VendorName\\PackageName\\Database\\Factories\\": "database/factories/"
+            "Paulund\\EloquentLifetime\\": "src/",
+            "Paulund\\EloquentLifetime\\Tests\\": "tests/",
+            "Paulund\\EloquentLifetime\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {

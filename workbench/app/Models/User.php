@@ -3,12 +3,15 @@
 namespace Workbench\App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Paulund\EloquentLifetime\Traits\EloquentLifetime;
 
 class User extends Authenticatable
 {
+    use EloquentLifetime;
     use HasFactory, Notifiable;
 
     /**
@@ -41,4 +44,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    protected static function newFactory()
+    {
+        return \Workbench\Database\Factories\UserFactory::new();
+    }
+
+    public function lifetime(): Carbon
+    {
+        return now()->subDays(30);
+    }
 }
